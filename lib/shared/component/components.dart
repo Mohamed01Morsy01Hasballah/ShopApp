@@ -4,6 +4,24 @@ import 'package:saad/shared/network/color/style.dart';
 
 import '../../layout/ShopLayout/cubit/cubit.dart';
 import '../../models/ProductFavoriteModel.dart';
+Widget DefaultAppBar({
+   required  BuildContext context,
+    String? Title,
+   List<Widget>? actions,
+})=>AppBar(
+   leading:IconButton(
+       onPressed: (){
+           Navigator.pop(context);
+       },
+       icon:Icon(
+           Icons.arrow_back_ios
+       ),
+   ),
+    title:Text(
+        Title!,
+    ),
+    actions:actions
+);
 Widget buildBroductItem( model,context){
     return Padding(
         padding: const EdgeInsets.all(20),
